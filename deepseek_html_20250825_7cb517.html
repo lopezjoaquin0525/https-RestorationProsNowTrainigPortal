@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoration Pros Now Sales & Intake Training Portal</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; margin:0; background:#f0f2f5; color:#333; line-height:1.6; }
+        nav { background-color: #007BFF; display:flex; justify-content:center; padding:15px; flex-wrap:wrap; position: sticky; top: 0; z-index: 100; }
+        nav a { color:white; text-decoration:none; margin:0 20px; font-weight:bold; }
+        nav a:hover { color:#e2e2e2; }
+        header { text-align:center; padding:40px 20px 20px; }
+        header h1 { margin:0; font-size:2.2em; color:black; }
+        header p { font-size:1.1em; margin-top:10px; }
+        .video-container { display:flex; justify-content:center; margin:20px 0; }
+        iframe { max-width:100%; border:none; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .section { max-width:900px; margin:30px auto; padding:25px; background:white; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+        h2 { border-bottom:2px solid; padding-bottom:5px; margin-top:30px; }
+        ul { list-style:none; padding:0; }
+        li { margin:10px 0; }
+        li a { text-decoration:none; font-weight:bold; cursor:pointer; display:block; padding: 8px 12px; border-radius: 4px; transition: background 0.3s; }
+        li a:hover { text-decoration:underline; background: #f8f9fa; }
+        .sdr h2, .sdr a { color:#007BFF; }
+        .intake h2, .intake a { color:#d62828; }
+        .highlight-black { color:black; font-weight:bold; }
+        .highlight-red { color:#d62828; font-weight:bold; }
+        footer { text-align:center; padding:20px; background:#e2e2e2; margin-top:40px; }
+        .search-container { text-align:center; margin:20px; }
+        .search-container input { padding:12px; width:80%; max-width:400px; border:2px solid #007BFF; border-radius:5px; font-size: 16px; }
+        .toc { display:none; margin-top:10px; padding-left:20px; border-left:2px solid #ccc; }
+        pre { font-family: 'Courier New', monospace; font-size:13px; background:#f8f8f8; padding:15px; border-radius:5px; white-space:pre-wrap; line-height: 1.4; overflow-x: auto; }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; background: #007BFF; color: white; padding: 10px 15px; border-radius: 50%; text-decoration: none; display: none; }
+        .back-to-top:hover { background: #0056b3; }
+        .logo { height: 50px; margin-right: 15px; }
+        .notification { position: fixed; top: 20px; right: 20px; background: #4CAF50; color: white; padding: 15px; border-radius: 5px; display: none; z-index: 1000; }
+        @media (max-width: 768px) {
+            nav { flex-direction: column; align-items: center; }
+            nav a { margin: 5px 0; }
+            .section { padding: 15px; margin: 15px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Notification -->
+<div class="notification" id="notification">Link copied to clipboard!</div>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top">↑</a>
+
+<!-- Navigation -->
+<nav>
+    <a href="#sdr-section">SDR Training</a>
+    <a href="#intake-section">Intake Training</a>
+    <a href="#about">About</a>
+</nav>
+
+<!-- Header -->
+<header>
+    <h1>Restoration Pros Now Sales & Intake Training Portal</h1>
+    <p>Everything you need to know about how we work, our processes, and our culture lives here. Check out the video below for a quick intro!</p>
+</header>
+
+<!-- Video -->
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6q5K3vURd2E" allowfullscreen></iframe>
+</div>
+
+<!-- Search -->
+<div class="search-container">
+    <input type="text" id="search" placeholder="Search training topics..." onkeyup="searchLinks()">
+</div>
+
+<!-- SDR Section -->
+<div class="section sdr" id="sdr-section">
+    <h2>Sales Development Representative (SDR) Training</h2>
+    <ul>
+        <li><a onclick="toggleTOC('sdr-toc')">Sales Training</a></li>
+        <li><a onclick="toggleTOC('sdr-appointment')">Appointment Setting Workflow</a></li>
+        <li><a onclick="toggleTOC('sdr-tools')">Tools & Resources</a></li>
+    </ul>
+
+    <!-- SDR TOC -->
+    <div id="sdr-toc" class="toc">
+        <ul>
+            <li><a onclick="toggleTOC('sdr-section1')">1. Company Overview</a>
+                <div id="sdr-section1" class="toc">
+                    <p class="highlight-black">Restoration Experts You Can Trust</p>
+                    <p>We deliver fast, reliable solutions for water, fire, mold, and storm property damage. Our certified teams provide thorough, professional restoration to protect property and peace of mind.</p>
+                    <p class="highlight-black">Mission & Values</p>
+                    <p>Provide expert restoration with integrity, speed, and clear communication, treating every property as if it were our own.</p>
+                    <p class="highlight-black">Why It Matters</p>
+                    <p>We restore stability after disasters, minimize damage, and provide reassurance during stressful situations.</p>
+                    <p class="highlight-black">Leadership</p>
+                    <p>Led by a founder with 20+ years of experience in environmental hazard mitigation and emergency response.</p>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('sdr-section2')">2. Who We Serve & Our Differentiators</a>
+                <div id="sdr-section2" class="toc">
+                    <p class="highlight-black">Residential Clients</p>
+                    <p>Fast, empathetic guidance for water, fire, and mold emergencies, ensuring clear updates throughout the process.</p>
+                    <p class="highlight-black">Commercial Clients</p>
+                    <p>Efficient restoration to minimize downtime, with proactive communication and safety compliance.</p>
+                    <p class="highlight-black">Key Differentiators</p>
+                    <ul>
+                        <li>Rapid response to prevent further damage</li>
+                        <li>IICRC-certified, experienced teams</li>
+                        <li>Full-service restoration from mitigation to rebuild</li>
+                        <li>Insurance coordination for seamless claims</li>
+                        <li>Advanced technology for accurate diagnostics</li>
+                        <li>Long-term partnership approach with contractors</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('sdr-section3')">3. Restoration Services</a>
+                <div id="sdr-section3" class="toc">
+                    <ul>
+                        <li><span class="highlight-black">Water Damage:</span> Dehumidification, deep drying, mitigation</li>
+                        <li><span class="highlight-black">Mold Remediation:</span> Containment, HEPA filtration, EPA-approved disinfectant & elimination</li>
+                        <li><span class="highlight-black">Fire:</span> Smoke & soot cleanup, odor removal, structural repair</li>
+                        <li><span class="highlight-black">Storm:</span> Emergency board-up, debris removal, full repair</li>
+                    </ul>
+                    <p class="highlight-black">All work meets IICRC and OSHA standards. Specialized handling for asbestos, lead, and indoor air quality hazards.</p>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('sdr-section4')">4. SDR Role & Metrics</a>
+                <div id="sdr-section4" class="toc">
+                    <ul>
+                        <li>Engaging qualified restoration contractors via CRM and Clay</li>
+                        <li>Qualifying leads for service type, location, and urgency</li>
+                        <li>Scheduling appointments in Calendly</li>
+                        <li>Maintaining 100% CRM accuracy</li>
+                        <li>Making 120–150 calls daily with 75–95 meaningful conversations</li>
+                        <li>Securing 3–5 appointments per day, with ≥98% show rate</li>
+                        <li>Following up on reschedules and nurturing leads</li>
+                        <li>Delivering accurate, empathetic client communication</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('sdr-section5')">5. Selling Points & Client Pain</a>
+                <div id="sdr-section5" class="toc">
+                    <ul>
+                        <li>Focus on peace of mind, not just restoration</li>
+                        <li>Present the company as problem-solvers in urgent situations</li>
+                        <li>Address client concerns: delays, insurance confusion, hidden damage</li>
+                        <li>Highlight 24/7/365 emergency service and certified teams</li>
+                        <li>Emphasize full-service capabilities and 20+ years of expertise</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('sdr-section6')">6. SDR Script</a>
+                <div id="sdr-section6" class="toc">
+<pre>
+SDR Script
+
+Invitation:
+Hello. Good morning. I was calling for your restoration property services. (Pause)
+Yes, we're looking for someone to connect with our residential and commercial clients.
+Would you be the person I could speak with? (Pause, listen to their response & assess decision-making authority)
+
+Prospect Responses:
+Decision Maker: "Yes, I'm the (Founder / Owner / Manager)" or "How may I help you?"
+Gatekeeper: Do you have an active job? Do you need service? Do you have an emergency? Is this for water, fire, or mold?
+Who are you? What company are you from? What is the purpose of the call?
+
+Pitch:
+We're connecting one or two trusted restoration service providers in the area with our clients who need help with their property damage.
+As part of our launch, you'll receive up to 5 active work jobs over the next 30 to 60 days with no fees, costs, or percentages—
+so you can see how we operate. All we ask in return is a testimonial based on your experience.
+
+Qualifying Questions:
+1) How long have you been in business, and what types of verticals do you prefer — water damage, mold remediation, hotels, apartments, senior living?
+2) Do you service from one location or multiple?
+3) What areas or ZIP codes would you prefer to receive this active work?
+4) Do you handle mold-related jobs? If so, do you have licensing?
+5) What's your preferred alert method — text, email, or phone call?
+6) How quickly are you typically able to respond or dispatch? [Do you offer 24/7 emergency services?]
+
+Close:
+Thanks for sharing — sounds great. Let's set up a quick 20–30 minute Zoom meeting with our founder, Erik Lundgaard.
+He'll walk you through the important details and answer all your questions.
+Would [10:00 AM Central Time] work for you? And what's the best email address to send your private Calendly invite?
+Perfect — just to confirm, you're booked for [Tuesday, June 17th at 10:00 AM Central Time].
+If the Calendly link shows a different time zone, no worries — it's still set for [10:00 AM Central].
+</pre>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Appointment Workflow -->
+    <div id="sdr-appointment" class="toc">
+        <h3>Appointment Setting Workflow</h3>
+        <ul>
+            <li>Initial call using script</li>
+            <li>Qualify lead (location, service type, license, insurance)</li>
+            <li>Schedule via Calendly and confirm email/phone</li>
+            <li>Follow-up 24 hours prior to appointment</li>
+            <li>Document lead in CRM with full details and tags</li>
+            <li>Notify contractor of upcoming appointment</li>
+        </ul>
+    </div>
+
+    <!-- SDR Tools -->
+    <div id="sdr-tools" class="toc">
+        <h3>Tools & Resources</h3>
+        <ul>
+            <li>GoHighLevel (GHL) – CRM, dialer, pipeline, automation</li>
+            <li>Clay – Lead sourcing and enrichment</li>
+            <li>Calendly – Booking tool with smart routing</li>
+            <li>Slack – Team communication, booking alerts</li>
+            <li>Zoom – Appointment video calls</li>
+            <li>Google Sheets – KPI & lead logs</li>
+            <li>SDR SOP Document</li>
+            <li>ChatGPT / DeepSeek, Sales script, and coaching insights</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Intake Section -->
+<div class="section intake" id="intake-section">
+    <h2>Intake Specialist Training</h2>
+    <ul>
+        <li><a onclick="toggleTOC('intake-toc')">Intake Training</a></li>
+        <li><a onclick="toggleTOC('intake-warm')">Warm Transfer Workflow</a></li>
+        <li><a onclick="toggleTOC('intake-tools')">Tools & Resources</a></li>
+    </ul>
+
+    <!-- Intake TOC -->
+    <div id="intake-toc" class="toc">
+        <ul>
+            <li><a onclick="toggleTOC('intake-section1')">1. Company Overview</a>
+                <div id="intake-section1" class="toc">
+                    <p class="highlight-black">Restoration Experts You Can Trust</p>
+                    <p>We deliver fast, reliable solutions for water, fire, mold, and storm property damage. Our certified teams provide thorough, professional restoration to protect property and peace of mind.</p>
+                    <p class="highlight-black">Mission & Values</p>
+                    <p>Provide expert restoration with integrity, speed, and clear communication, treating every property as if it were our own.</p>
+                    <p class="highlight-black">Why It Matters</p>
+                    <p>We restore stability after disasters, minimize damage, and provide reassurance during stressful situations.</p>
+                    <p class="highlight-black">Leadership</p>
+                    <p>Led by a founder with 20+ years of experience in environmental hazard mitigation and emergency response.</p>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('intake-section2')">2. Who We Serve & Our Differentiators</a>
+                <div id="intake-section2" class="toc">
+                    <p class="highlight-black">Residential Clients</p>
+                    <p>Fast, empathetic guidance for water, fire, and mold emergencies, ensuring clear updates throughout the process.</p>
+                    <p class="highlight-black">Commercial Clients</p>
+                    <p>Efficient restoration to minimize downtime, with proactive communication and safety compliance.</p>
+                    <p class="highlight-black">Key Differentiators</p>
+                    <ul>
+                        <li>Rapid response to prevent further damage</li>
+                        <li>IICRC-certified, experienced teams</li>
+                        <li>Full-service restoration from mitigation to rebuild</li>
+                        <li>Insurance coordination for seamless claims</li>
+                        <li>Advanced technology for accurate diagnostics</li>
+                        <li>Long-term partnership approach with contractors</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('intake-section3')">3. Restoration Services</a>
+                <div id="intake-section3" class="toc">
+                    <ul>
+                        <li><span class="highlight-black">Water Damage:</span> Dehumidification, deep drying, mitigation</li>
+                        <li><span class="highlight-black">Mold Remediation:</span> Containment, HEPA filtration, EPA-approved disinfectant & elimination</li>
+                        <li><span class="highlight-black">Fire:</span> Smoke & soot cleanup, odor removal, structural repair</li>
+                        <li><span class="highlight-black">Storm:</span> Emergency board-up, debris removal, full repair</li>
+                    </ul>
+                    <p class="highlight-black">All work meets IICRC and OSHA standards. Specialized handling for asbestos, lead, and indoor air quality hazards.</p>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('intake-section4')">4. Intake Role & Metrics</a>
+                <div id="intake-section4" class="toc">
+                    <ul>
+                        <li>Emergency Leads: ≤60 seconds response | Standard Leads: ≤7 minutes</li>
+                        <li>Gather critical details; log and tag all lead information accurately in CRM & files</li>
+                        <li>Reassure the client, establish confidence, and reduce stress</li>
+                        <li>Clarify Restoration Pros Now's role as the emergency dispatch team, not the contractor</li>
+                        <li>Transfer the call to the contractor following the Mandatory Disclosure</li>
+                        <li>Follow-up within 3–5 hours & maintain ≥98% call answer rate / 0% data errors</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('intake-section5')">5. Intake Points & Client Pain</a>
+                <div id="intake-section5" class="toc">
+                    <ul>
+                        <li>Be the client's first point of stability during emergencies</li>
+                        <li>Listen carefully to determine the type of emergency property damage</li>
+                        <li>Classify damage into proper categories (e.g., Water Category 1–3, Fire Classes A–K)</li>
+                        <li>Utilize Intake Sheet to document</li>
+                        <li>Maintain professional, empathetic communication at all times</li>
+                        <li>Build client confidence through clarity and reassurance</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a onclick="toggleTOC('intake-section6')">6. Intake Script</a>
+                <div id="intake-section6" class="toc">
+<pre>
+Intake Script
+
+Opening Greeting (1 Second)
+"Thank you for calling Restoration Pros Now, this is [Your Name]. What type of emergency are you experiencing?"
+Listen carefully – identify:
+• Type of emergency or damage
+• Client's emotional tone
+• Urgency or pain points
+
+Emergency Category / Classification
+Type of Damage (circle one):
+Water Emergency / Damage
+• Category 1 – Clean water (minimal risk)
+• Category 2 – Gray water (some contamination)
+• Category 3 – Black water (sewage, high-risk)
+
+Fire/Smoke
+• Class A: Combustible materials (wood, paper, cloth, trash)
+• Class B: Flammable liquids (gasoline, kerosene, oil)
+• Class C: Flammable gases (propane, butane)
+• Class D: Combustible metals (magnesium, aluminum, titanium)
+• Class K: Cooking oils and fats (commercial kitchens)
+
+Mold / Odor
+Storm damage (Wind / Hail)
+Other: __________
+
+Ask:
+"Where did the damage occur?"  Location: __________
+"When did this happen?"       Time of Loss: __________
+"Do you know what caused the damage, or are we still investigating?"  Cause: __________
+
+Possible Sources of Water Damage (circle all that apply):
+• Pipe Burst
+• Water Heater Failure
+• A/C Overflow
+• Sink / Toilet / Drain / Dishwasher Backup
+• Roof Leak
+• Crawlspace / Foundation Issue
+• Sewer Backup
+• Weather-Related (Flood / Storm)
+• Unknown / Still Active
+
+Reassure & Build Confidence
+"I'm really sorry you're going through this — but don't worry, you're in good hands. We will take care of you."
+(Keep tone steady, calm, and confident.)
+
+Contact & Property Information
+• Full Name: __________
+• Phone Number: __________
+• Property Address (Street, City, State, Zip): __________
+• Email Address: __________
+• Property Type: [ ] Residential  [ ] Commercial
+• Are you the homeowner or the property manager? [ ] Yes [ ] No
+
+Insurance & Payment
+"Have you already filed an Insurance claim?"  [ ] Yes  [ ] No
+• Claim Number: __________
+• Insurance Provider: __________
+If unsure or hesitant:
+"No problem — we'll help document everything and guide you through the process. No pressure either way."
+
+Mandatory Disclosure Script — Clarification of Our Role
+"Just to clarify — we're the emergency dispatch team, not the contractor. We connect you with a licensed, insured, and vetted contractor who will provide:
+– a free 1-hour water damage inspection."
+
+Transfer Protocol
+Pre-Transfer (Client):
+"I'm going to connect you now with [Contractor's Name] from [Company Name].
+They are [water damage experts] and should arrive within 30–60 minutes. Let's get them on the line!"
+
+Prep the Contractor (Before Live Transfer):
+"Hey [Contractor Name], it's [Your Name] at Restoration Pros Now. Got a new lead for you:
+Client: [Client Name]
+Location: [City]
+Type of Damage: [e.g., Category 2 water, mold, etc.]
+Cause: [e.g., pipe burst]
+Insurance: [Yes/No]
+Connecting you now."
+
+Live Introduction (3-way call):
+"[Client Name], I've got [Contractor Name] on the call from [Company Name].
+They'll take it from here and take care of your (type of emergency property damage.)" 
+
+Important: Mute and drop only after both parties hang up.
+</pre>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="intake-warm" class="toc">
+        <h3>Warm Transfer Workflow</h3>
+        <p>Step-by-step warm transfer process:</p>
+        <ul>
+            <li>Gather emergency details and client information (intake complete)</li>
+            <li>Reassure client: "I'll connect you directly with our licensed contractor."</li>
+            <li>Pre-brief contractor with:
+                <ul>
+                    <li>Client name and location</li>
+                    <li>Type and category of emergency</li>
+                    <li>Cause (if known)</li>
+                    <li>Insurance status</li>
+                </ul>
+            </li>
+            <li>Initiate 3-way call: introduce client to contractor</li>
+            <li>Hand off by saying: "[Contractor], the call is yours to assist [Client]."</li>
+            <li>Mute and remain on call until both parties confirm connection, then drop off</li>
+        </ul>
+    </div>
+
+    <div id="intake-tools" class="toc">
+        <h3>Tools & Resources</h3>
+        <ul>
+            <li>GoHighLevel CRM — intake, documentation, tagging</li>
+            <li>Clay — lead sourcing and enrichment</li>
+            <li>Calendly — scheduling and confirmation</li>
+            <li>Internal templates & call scripts</li>
+            <li>QA checklists and performance dashboards</li>
+        </ul>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="section" id="about">
+    <h2>About This Portal</h2>
+    <p>This training portal is designed to help SDRs and Intake Specialists at Restoration Pros Now excel in their roles. All materials are regularly updated to reflect our latest processes and best practices.</p>
+    <p>For questions or suggestions, please contact your manager or the training department.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Restoration Pros Now Training Portal</p>
+    <p>© 2023 Restoration Pros Now. All rights reserved.</p>
+</footer>
+
+<script>
+    // Search functionality
+    function searchLinks() {
+        let input = document.getElementById('search').value.toLowerCase();
+        let links = document.querySelectorAll('ul li');
+        links.forEach(link => {
+            link.style.display = link.innerText.toLowerCase().includes(input) ? '' : 'none';
+        });
+    }
+
+    // Toggle TOC sections
+    function toggleTOC(id) {
+        const toc = document.getElementById(id);
+        toc.style.display = (toc.style.display === "none" || toc.style.display === "") ? "block" : "none";
+        
+        // Scroll to the section if opening
+        if (toc.style.display === "block") {
+            toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Back to top button
+    window.onscroll = function() {
+        const backToTop = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    };
+
+    // Show notification
+    function showNotification() {
+        const notification = document.getElementById('notification');
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000);
+    }
+
+    // Copy to clipboard functionality
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            showNotification();
+        });
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Close all TOCs by default
+        const tocs = document.querySelectorAll('.toc');
+        tocs.forEach(toc => {
+            toc.style.display = 'none';
+        });
+    });
+</script>
+</body>
+</html>
